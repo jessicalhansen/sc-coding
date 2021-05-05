@@ -1,8 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import Shapes from './Shape';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+class Shape extends React.Component {
+  // constructor() {
+  //     super();
+  // }
+
+  getArea() {
+      console.log('getArea method');
+  }
+
+  getName() {
+      console.log('getName method');
+  }
+
+  increaseSize() {
+      console.log('increaseSize method');
+  }
+
+
+  render() {
+      return (
+          <>
+          <h2>Shapes</h2>
+          <div className="shapes">
+              <p>{this.getArea()}</p>
+          </div>
+          </>
+      )
+  }
+}
+
+function App () {
+  return (
+    <div className="Main">
+      <h1>SC Coding Assessment</h1>
+        <Shape />
+    </div>
+  )
+} 
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,8 +48,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
